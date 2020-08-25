@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout/index.html}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<!--<div th:switch="${product}">-->
+<!--    <h2 th:case="null">No product yet!</h2>-->
+<!--    <div th:case="*">-->
+
+<section layout:fragment="content">
+    <h1 class="h3 mb-2 text-gray-800">Product Detail</h1>
+    <div><th>Name </th><td th:text="${product.name}"></td></div>
+    <div><th>Price </th><td th:text="${product.price}"></td></div>
+    <div><th>Quantity </th><td th:text="${product.quantity}"></td></div>
+
+
+</section>
+
+<!--    </div>-->
+<!--    <p><a href="/signup">Add a new user</a></p>-->
+<!--</div>-->
+</body>
+</html>
